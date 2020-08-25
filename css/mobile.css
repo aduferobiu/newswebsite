@@ -55,6 +55,6 @@
 
 @media(max-width:500px) {
     .article .article-container img {
-        width: 450px !important;
+        width: 350px !important;
     }
 }
