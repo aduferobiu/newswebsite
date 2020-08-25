@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* utilities */
+
+:root {
+    --primary-color: #fa1112;
+    --secondary-color: #faa500;
+    --dark-color: #333;
+    --light-color: #f3f3f3;
+    --max-width: 1100px;
+}
+
+.category {
+    --sport-color: #faa500;
+    --ent-color: #a66bbe;
+    --tech-color: #009cff;
+}
+
+body {
+    background: var(--light-color);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
+.dark {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Staatliches', cursive;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.current {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.6rem;
+}
+
+.current:hover,
+.btn:hover,
+.btn-dark:hover {
+    background-color: var(--light-color);
+    color: #000;
+}
+
+.container {
+    margin: auto;
+    max-width: var(--max-width);
+    overflow: hidden;
+    padding: 0 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    color: var(--light-color);
+    margin-top: 0.7rem;
+    border: none;
+}
+
+.btn-dark {
+    display: inline-block;
+    background-color: var(--dark-color);
+    padding: 0.5rem;
+    color: var(--light-color);
+    margin-top: 0.7rem;
+    border: none;
+}
+
+.category-sport {
+    background-color: var(--sport-color);
+    border-radius: 25px;
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+    color: var(--light-color);
+    margin-top: 0.5rem;
+}
+
+.category-ent {
+    background-color: var(--ent-color);
+    border-radius: 25px;
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+    color: var(--light-color);
+    margin-top: 0.5rem;
+}
+
+.category-tech {
+    background-color: var(--tech-color);
+    border-radius: 25px;
+    display: inline-block;
+    padding: 0.3rem 0.5rem;
+    color: var(--light-color);
+    margin-top: 0.5rem;
+}
+
+
+/* main-nav */
+
+#main-nav {
+    background-color: #fff;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+}
+
+#main-nav img {
+    width: 200px;
+    padding: 0;
+}
+
+#main-nav .container {
+    display: grid;
+    grid-template-columns: 6fr 4fr 3fr;
+    justify-self: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+
+/* social media images */
+
+.social-media a img {
+    display: inline-block;
+    width: 30px !important;
+    height: auto;
+    align-self: center;
+    filter: grayscale(100%);
+    margin-right: 0.5rem;
+}
+
+.navbar a {
+    margin-right: 0.8rem;
+}
+
+
+/* showcase */
+
+#showcase {
+    background-color: rgba(87, 87, 87, 0.75);
+    color: var(--light-color);
+    position: relative;
+}
+
+#showcase h1 {
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.2rem
+}
+
+#showcase::before {
+    content: '';
+    background: url('../img/sport4.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#showcase .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 60vh;
+    justify-self: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+/* article */
+
+.article {
+    margin: 1rem 0;
+}
+
+.article .article-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.article .article-container img {
+    width: 300px;
+    display: block;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.card-dark {
+    background-color: var(--dark-color);
+    padding: 1rem;
+    color: #fff;
+}
+
+.card-red {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: #fff;
+}
+
+.card-secondary {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    color: #fff;
+}
+
+.article-container>*:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1/ span 2;
+    align-items: center;
+    justify-self: center;
+}
+
+.article-container>*:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 2 / span 2;
+    align-items: center;
+    justify-self: center;
+}
+
+
+/* about us */
+
+.about-us {
+    margin: 2rem 0;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-gap: 1rem;
+}
+
+
+/* .aside {
+    display: block;
+} */
+
+.about-content {
+    grid-row: 1 / span 4;
+}
+
+
+/* article */
+
+.news {
+    margin: 2rem 0;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    grid-gap: 1rem;
+}
+
+.news-content {
+    grid-row: 1 / span 4;
+}
+
+.news-container h1 {
+    margin-bottom: 1rem;
+}
+
+.news-category p {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.news-category p:not(:last-child) {
+    border-bottom: 1px solid #333;
+}
+
+.meta {
+    margin: 0.5rem 0 1rem;
+}
+
+.meta small {
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meta img {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 1rem;
+}
+
+footer img {
+    width: 150px;
+    padding: 0;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+}
+
+footer h3 {
+    margin-bottom: 0.4rem;
+}
+
+.join {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: 0.5rem;
+    display: inline-block;
+    margin-top: 0.7rem;
+}
+
+.footer-content {
+    grid-column: 1/span 4;
+    background-color: #444444;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.site-links p {
+    font-size: 1rem;
+}
+
+.site-links p:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+
+
+/* newsletter */
+
+.newsletter .btn {
+    width: 100%;
+}
+
+.newsletter .email {
+    width: 100%;
+    padding: 0.5rem;
+}
